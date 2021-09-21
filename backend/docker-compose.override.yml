@@ -5,15 +5,15 @@ services:
     build:
       context: .
       args:
-        SECRET_KEY: ${SECRET_KEY}
+        SECRET_KEY: tz6l8_ie2&=&9mrp+lb2k##13y66qw%c6o0k*z^io)y&#%fu%g
     env_file: .env
     volumes:
       - ./:/opt/webapp
     ports:
-      - "8000:${PORT}"
+      - "8000:8000"
   postgres:
     environment:
-      POSTGRES_PASSWORD: <postgres_pwd>
+      POSTGRES_PASSWORD: "Amir1343"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     ports:
