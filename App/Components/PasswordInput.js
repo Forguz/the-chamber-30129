@@ -4,6 +4,7 @@ import CBSvg from "../assets/svgs/CBSvg";
 import { scale } from "../Utils/scale";
 import KeySVG from "../assets/svgs/KeySVG";
 import Colors from "../Utils/Colors";
+import ApplicationStyles from "../Utils/ApplicationStyles";
 
 export default class PasswordInput extends Component {
   render() {
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     marginTop: scale(8),
   },
   textInput: {
-    fontSize: scale(14),
+    ...ApplicationStyles.MediumFont,
     marginHorizontal: scale(18),
     color: Colors.primaryColor,
   }

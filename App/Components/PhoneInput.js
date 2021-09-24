@@ -4,6 +4,7 @@ import CBSvg from "../assets/svgs/CBSvg";
 import PhoneSVG from "../assets/svgs/PhoneSVG";
 import { scale } from "../Utils/scale";
 import Colors from "../Utils/Colors";
+import ApplicationStyles from "../Utils/ApplicationStyles";
 
 export default class PhoneInput extends Component {
   render() {
@@ -13,7 +14,7 @@ export default class PhoneInput extends Component {
         <TextInput
           keyboardType={"decimal-pad"}
           placeholder={"Phone Number"}
-          placeholderTextColor={'rgba(0, 0, 0, 0.87)'}
+          placeholderTextColor={'rgba(0, 0, 0, 0.38)'}
           style={styles.textInput}
           enablesReturnKeyAutomatically
           returnKeyType="default"
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: scale(12),
   },
   textInput: {
-    fontSize: scale(14),
+    ...ApplicationStyles.MediumFont,
     marginHorizontal: scale(18),
     color: Colors.primaryColor,
   },
