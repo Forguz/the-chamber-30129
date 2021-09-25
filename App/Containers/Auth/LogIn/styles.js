@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 import { scale } from "../../../Utils/scale";
 import Colors from "../../../Utils/Colors";
 import Constants from "../../../Constants/Constants";
-import ApplicationStyles from "../../../Utils/ApplicationStyles";
 
 export const styles = StyleSheet.create({
   container: {
@@ -19,13 +18,5 @@ export const styles = StyleSheet.create({
     marginTop: scale(60),
     paddingHorizontal: Constants.appDefaultPadding,
     paddingBottom: scale(100),
-  },
-
-  title: {
-    ...ApplicationStyles.RegularFont,
-    fontSize: scale(36),
-    lineHeight: scale(36),
-    marginBottom: scale(18),
-    letterSpacing: -0.01,
   },
 });

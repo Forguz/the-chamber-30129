@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import CBSvg from "../assets/svgs/CBSvg";
 import { scale } from "../Utils/scale";
 import KeySVG from "../assets/svgs/KeySVG";
@@ -7,25 +7,39 @@ import Colors from "../Utils/Colors";
 import ApplicationStyles from "../Utils/ApplicationStyles";
 
 export default class PasswordInput extends Component {
+  constructor(props) {
+    super(props);
+
+    this.passwordRef = React.createRef(null);
+  }
+
+  onFocus = () => {
+    this.passwordRef.current.focus();
+  };
+
   render() {
     return (
-      <View style={styles.container}>
+      <TouchableOpacity style={styles.container} onPress={() => this.onFocus()} activeOpacity={0.8}>
         <CBSvg icon={KeySVG} width={scale(19.51)} height={scale(19.5)} />
         <TextInput
+          ref={this.passwordRef}
           autoComplete="off"
           autoCorrect={false}
           spellCheck={false}
-          placeholder={'Password'}
-          placeholderTextColor={'rgba(0, 0, 0, 0.38)'}
+          secureTextEntry={true}
+          placeholder={"Password"}
+          placeholderTextColor={"rgba(0, 0, 0, 0.38)"}
           style={styles.textInput}
           enablesReturnKeyAutomatically
           returnKeyType="go"
           numberOfLines={1}
           value={this.props.value}
           onChangeText={this.props.onChangeText}
+          blurOnSubmit={true}
+          onSubmitEditing={() => this.props.onNext()}
         />
-      </View>
-    )
+      </TouchableOpacity>
+    );
   }
 }
 
@@ -43,5 +57,5 @@ const styles = StyleSheet.create({
     ...ApplicationStyles.MediumFont,
     marginHorizontal: scale(18),
     color: Colors.primaryColor,
-  }
+  },
 });
