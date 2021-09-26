@@ -4,9 +4,9 @@ import { scale } from "../../Utils/scale";
 import ApplicationStyles from "../../Utils/ApplicationStyles";
 
 export default function AnotherOption(props) {
-  const { label } = props;
+  const { label, style } = props;
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <Text style={styles.text}>{label}</Text>
     </View>
   );

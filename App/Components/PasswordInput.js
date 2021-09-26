@@ -27,11 +27,11 @@ export default class PasswordInput extends Component {
           autoCorrect={false}
           spellCheck={false}
           secureTextEntry={true}
-          placeholder={"Password"}
+          placeholder={this.props.placeholder ?? "Password"}
           placeholderTextColor={"rgba(0, 0, 0, 0.38)"}
           style={styles.textInput}
           enablesReturnKeyAutomatically
-          returnKeyType="go"
+          returnKeyType={this.props.returnKeyType ?? "go"}
           numberOfLines={1}
           value={this.props.value}
           onChangeText={this.props.onChangeText}
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     ...ApplicationStyles.MediumFont,
-    marginHorizontal: scale(18),
+    marginHorizontal: scale(12),
     color: Colors.primaryColor,
   },
 });

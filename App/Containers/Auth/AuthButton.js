@@ -5,9 +5,9 @@ import { scale } from "../../Utils/scale";
 import ApplicationStyles from "../../Utils/ApplicationStyles";
 
 export default function AuthButton(props) {
-  const { label, onPress } = props;
+  const { label, style, onPress } = props;
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
       <LinearGradient
         useAngle={true}
         angle={269.88}
