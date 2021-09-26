@@ -27,6 +27,12 @@ export default StyleSheet.create({
     fontWeight: "700",
     fontSize: scale(14),
   },
+  SemiBoldFont: {
+    color: Colors.primaryColor,
+    fontFamily: Fonts.MontserratSemiBold,
+    fontWeight: "600",
+    fontSize: scale(14),
+  },
 
   authTitle: {
     color: Colors.primaryColor,

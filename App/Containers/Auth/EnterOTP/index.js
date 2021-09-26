@@ -23,7 +23,7 @@ export default class EnterOTPScreen extends Component {
     const password = this.props.navigation.getParam('password');
     console.log(token, phoneNumber, password);
     if (password != null) {
-      // GoTo Home
+      NavigationService.navigate('Home');
     } else {
       NavigationService.navigate('ConfirmResetPassword');
     }
