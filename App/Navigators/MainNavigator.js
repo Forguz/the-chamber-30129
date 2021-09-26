@@ -1,6 +1,7 @@
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import SplashScreen from "../Containers/Splash";
 import AuthStackNavigator from "./AuthStackNavigator";
+import HomeStackNavigator from "./HomeStackNavigator";
 
 const AppNavigator = createSwitchNavigator(
   {
@@ -13,9 +14,14 @@ const AppNavigator = createSwitchNavigator(
     AuthStack: {
       screen: AuthStackNavigator,
     },
+    HomeStack: {
+      screen: HomeStackNavigator,
+    },
   },
   {
+    // TODO: uncomment here after testing
     initialRouteName: "Splash",
+    // initialRouteName: "HomeStack",
   },
 );
 
