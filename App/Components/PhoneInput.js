@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     ...ApplicationStyles.MediumFont,
-    marginHorizontal: scale(18),
+    marginHorizontal: scale(12),
     color: Colors.primaryColor,
   },
 });
